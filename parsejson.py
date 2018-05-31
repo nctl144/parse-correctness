@@ -6,7 +6,7 @@ def remove_files(workpath, filename):
     if os.path.exists(os.path.join(workpath, filename)):
         os.remove(os.path.join(workpath, filename))
 
-def write_rust(path, input_list):
+def write_result(path, input_list):
     # remove the white line at the end for rust
     output_file = open(path, "w")
     i = 0
@@ -24,9 +24,10 @@ def main():
     '''
     delete generated files if presented
     '''
-    workpath = os.path.join(os.getcwd())
-    remove_files(workpath, "input-url.txt")
-    remove_files(workpath, "scheme-url.txt")
+    c_workpath = os.path.join(os.getcwd(), "c")
+    remove_files(c_workpath, "input-url.txt")
+    remove_files(c_workpath, "scheme-url.txt")
+    remove_files(c_workpath, "netloc-url.txt")
 
     rust_workpath = os.path.join(os.getcwd(), "urlparsetest")
     remove_files(rust_workpath, "input-url.txt")
@@ -64,20 +65,13 @@ def main():
     '''
     Write the result to text files
     '''
-    url_output_file = open("input-url.txt", "w")
-    for url in result_url_list:
-        url_output_file.write("{0}\n".format(url))
-    url_output_file.close()
+    write_result("c/input-url.txt", result_url_list)
+    write_result("c/scheme-url.txt", scheme_list)
+    write_result("c/netloc-url.txt", netloc_list)
 
-    scheme_output_file = open("scheme-url.txt", "w")
-    for scheme in scheme_list:
-        scheme_output_file.write("{0}\n".format(scheme))
-    scheme_output_file.close()
-
-    # remove the white line at the end for rust
-    write_rust("urlparsetest/input-url.txt", result_url_list)
-    write_rust("urlparsetest/scheme-url.txt", scheme_list)
-    write_rust("urlparsetest/netloc-url.txt", netloc_list)
+    write_result("urlparsetest/input-url.txt", result_url_list)
+    write_result("urlparsetest/scheme-url.txt", scheme_list)
+    write_result("urlparsetest/netloc-url.txt", netloc_list)
 
 
 if __name__ == "__main__":
