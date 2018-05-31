@@ -5,3 +5,4 @@
 Test implemented:
 + Rust scheme, netloc
 + urllib join, scheme, netloc
++ uriparser scheme
