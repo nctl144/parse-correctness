@@ -4,7 +4,7 @@ import json
 import collections
 
 
-with open("urltest.json", 'r') as f:
+with open("../urltest.json", 'r') as f:
     datastore = json.load(f)
 
 incorrect_url = collections.defaultdict(list)
