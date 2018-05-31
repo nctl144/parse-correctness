@@ -1,0 +1,6 @@
+[package]
+name = "urlparsetest"
+version = "0.1.0"
+authors = ["nctl144 <nctl144@gmail.com>"]
+
+[dependencies]
