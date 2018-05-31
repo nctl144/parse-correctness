@@ -29,6 +29,10 @@ int main() {
     // printf("query afterLast: %s\n", uri.query.afterLast);
     // printf("query First: %s\n", uri.query.first);
 
+    /*
+    *
+    Read the input files
+    */
     FILE* scheme_url;
 
     char scheme_url_buffer[255];
@@ -38,38 +42,55 @@ int main() {
     int index = 0;
     while (fgets(scheme_url_buffer, 255, (FILE*) scheme_url)) {
         strcpy(scheme_list[index], scheme_url_buffer);
-
+        int i = 0;
+        for (i = 0; i < strlen(scheme_list[index]); i++) {
+            if (scheme_list[index][i] == '\n') {
+                scheme_list[index][i] = '\0';
+            }
+        }
         index += 1;
-    }
-
-    int i;
-
-    for (i = 0; i < 409; i++) {
-        printf("%s", scheme_list[i]);
     }
 
     fclose(scheme_url);
 
+    // int j;
+    // for (j = 0; j < 409; j++) {
+    //     printf("url: %s", scheme_list[j]);
+    // }
+
+
+    /*
+    *
+    Read the URL input files
+    */
     FILE* input_url;
 
     char input_url_buffer[255];
+    int counter = 0;
     input_url = fopen("input-url.txt", "r");
     while (fgets(input_url_buffer, 255, (FILE*) input_url)) {
-        // UriParserStateA state;
-        // UriUriA uri;
 
-        // state.uri = &uri;
-        //
-        // if (uriParseUriA(&state, input_url_buffer) != URI_SUCCESS) {
-        //     uriFreeUriMembersA(&uri);
-        // }
-        //
-        // uriFreeUriMembersA(&uri);
+        UriParserStateA state;
+        UriUriA uri;
 
+        state.uri = &uri;
+
+        if (uriParseUriA(&state, input_url_buffer) != URI_SUCCESS) {
+            uriFreeUriMembersA(&uri);
+        }
+
+        uriFreeUriMembersA(&uri);
+
+        if (strncmp(scheme_list[counter], uri.scheme.first, strlen(scheme_list[counter])) != 0) {
+            printf("unmatched scheme: %s, at index: %d\n", input_url_buffer, counter);
+        }
+
+        // printf("1 %s, 2%s\n", scheme_list[counter], uri.scheme.first);
+        counter += 1;
     }
 
     fclose(input_url);
 
-    printf("the program has finished :)");
+    printf("the program has finished :)\n");
     return 0;
 }
