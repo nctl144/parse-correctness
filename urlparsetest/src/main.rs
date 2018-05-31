@@ -20,16 +20,28 @@ fn lines_from_file(filename: &str) -> Vec<String> {
     lines
 }
 
+// fn import_data(filename: &str, list: &mut Vec<str>) {
+//     for scheme in lines_from_file(filename) {
+//         list.push(scheme);
+//     }
+// }
+
 fn main() {
 
     let file_inputurl = "input-url.txt";
     let file_scheme = "scheme-url.txt";
+    let file_netloc = "netloc-url.txt";
 
     let mut scheme_list = Vec::new();
+    let mut netloc_list = Vec::new();
     let mut index = 0;
 
     for scheme in lines_from_file(file_scheme) {
         scheme_list.push(scheme);
+    }
+
+    for netloc in lines_from_file(file_netloc) {
+        netloc_list.push(netloc);
     }
 
     for link in lines_from_file(file_inputurl) {
@@ -38,9 +50,19 @@ fn main() {
             .expect("Error while handling the issue_list_url");
 
         let url_scheme = _issue_list_url.scheme();
+        let url_netloc = _issue_list_url.host_str();
+        let mut url_netloc_str = "";
+
+        if url_netloc.is_some() {
+            url_netloc_str = url_netloc.unwrap()
+        }
 
         if url_scheme != scheme_list[index] {
             println!("unmatched scheme, input is {}", link);
+        }
+
+        if url_netloc_str != netloc_list[index] {
+            println!("unmatched netloc, input is {}", link);
         }
 
         index += 1;
