@@ -17,6 +17,7 @@ for item in datastore:
 
     if 'href' in item:
         result_url = item['href']
+
     if 'protocol' in item:
         scheme = item['protocol']
 
@@ -38,6 +39,10 @@ for item in datastore:
         if scheme != '' and parsed_obj.scheme + ":" != scheme:
             if not failure:
                 incorrect_url[input_url].append("incorrect scheme")
+
+        if netloc != '' and parsed_obj.netloc != netloc:
+            if not failure:
+                incorrect_url[input_url].append("incorrect netloc")
 
         # check the join result
         join_url = urljoin(base_url, input_url)
