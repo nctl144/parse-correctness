@@ -39,7 +39,17 @@ for item in datastore:
         failure = True
 
     try:
-        parsed_obj = urlparse(input_url)
+        join_url = urljoin(base_url, input_url)
+        if len(join_url) > 1:
+            join_url = join_url[:-1] if join_url[-1] == '/' else join_url
+
+
+        if result_url.lower() != '' and result_url.lower() != join_url.lower():
+            if not failure:
+                incorrect_url[input_url].append("incorrect join url")
+
+
+        parsed_obj = urlparse(join_url)
 
         if scheme.lower() != '' and parsed_obj.scheme.lower() != scheme.lower():
             if not failure:
@@ -49,15 +59,6 @@ for item in datastore:
             if not failure:
                 incorrect_url[input_url].append("incorrect netloc")
 
-        # check the join result
-        join_url = urljoin(base_url, input_url)
-        if len(join_url) > 1:
-            join_url = join_url[:-1] if join_url[-1] == '/' else join_url
-
-
-        if result_url.lower() != '' and result_url.lower() != join_url.lower():
-            if not failure:
-                incorrect_url[input_url].append("incorrect join url")
 
     except ValueError:
         if not failure:
