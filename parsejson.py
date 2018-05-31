@@ -45,6 +45,16 @@ def main():
         scheme_output_file.write("{0}\n".format(scheme))
     scheme_output_file.close()
 
+    url_output_file = open("urlparsetest/input-url.txt", "w")
+    for url in result_url_list:
+        url_output_file.write("{0}\n".format(url))
+    url_output_file.close()
+
+    scheme_output_file = open("urlparsetest/scheme-url.txt", "w")
+    for scheme in scheme_list:
+        scheme_output_file.write("{0}\n".format(scheme))
+    scheme_output_file.close()
+
 
 if __name__ == "__main__":
     main()
