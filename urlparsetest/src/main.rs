@@ -26,33 +26,35 @@ fn main() {
     let file_scheme = "scheme-url.txt";
 
     let mut scheme_list = Vec::new();
+    let mut index = 0;
 
     for scheme in lines_from_file(file_scheme) {
         scheme_list.push(scheme);
     }
 
-    for scheme in scheme_list {
-        println!("{}", scheme);
-    }
+    for link in lines_from_file(file_inputurl) {
 
-    // for link in lines_from_file(file_inputurl) {
-    //
-    //     let _issue_list_url = Url::parse(&link)
-    //         .expect("Error while handling the issue_list_url");
-    //
-    //     let url_scheme = _issue_list_url.scheme();
-    //
-    //
-    //     // println!("base url {}", link);
-    //     // println!("username {:?}", _issue_list_url.username()); // ''
-    //     // println!("password {:?}", _issue_list_url.password()); // None
-    //     // println!("hoststr {:?}", _issue_list_url.host_str()); // Some("github.com")
-    //     // println!("host {:?}", _issue_list_url.host()); // Some(Host::Domain("github.com")
-    //     // println!("port {:?}", _issue_list_url.port()); // None
-    //     // println!("path {}", _issue_list_url.path()); // "/rust-lang/rust/issues"
-    //     // println!("path segments {:?}", _issue_list_url.path_segments().map(|c| c.collect::<Vec<_>>())); // Some(vec!["rust-lang", "rust", "issues"])
-    //     // println!("query {:?}", _issue_list_url.query()); // Some("labels=E-easy&state=open")
-    //     // println!("fragment {:?}", _issue_list_url.fragment()); // None
-    //     // // println!(!_issue_list_url.cannot_be_a_base());
-    // }
+        let _issue_list_url = Url::parse(&link)
+            .expect("Error while handling the issue_list_url");
+
+        let url_scheme = _issue_list_url.scheme();
+
+        if url_scheme != scheme_list[index] {
+            println!("unmatched scheme, input is {}", link);
+        }
+
+        index += 1;
+        // println!("base url {}", link);
+        // println!("username {:?}", _issue_list_url.username()); // ''
+        // println!("password {:?}", _issue_list_url.password()); // None
+        // println!("hoststr {:?}", _issue_list_url.host_str()); // Some("github.com")
+        // println!("host {:?}", _issue_list_url.host()); // Some(Host::Domain("github.com")
+        // println!("port {:?}", _issue_list_url.port()); // None
+        // println!("path {}", _issue_list_url.path()); // "/rust-lang/rust/issues"
+        // println!("path segments {:?}", _issue_list_url.path_segments().map(|c| c.collect::<Vec<_>>())); // Some(vec!["rust-lang", "rust", "issues"])
+        // println!("query {:?}", _issue_list_url.query()); // Some("labels=E-easy&state=open")
+        // println!("fragment {:?}", _issue_list_url.fragment()); // None
+        // // println!(!_issue_list_url.cannot_be_a_base());
+    }
+    println!("program is finished :)");
 }
