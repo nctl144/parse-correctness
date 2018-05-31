@@ -1,4 +1,4 @@
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 import json
 import collections
@@ -12,8 +12,11 @@ incorrect_url = collections.defaultdict(list)
 for item in datastore:
     input_url = item['input']
     base_url = item['base']
-    scheme, netloc, path, search, failure = '', '', '', '', False
 
+    scheme, netloc, path, search, failure, result_url = '', '', '', '', False, ''
+
+    if 'href' in item:
+        result_url = item['href']
     if 'protocol' in item:
         scheme = item['protocol']
 
@@ -34,7 +37,16 @@ for item in datastore:
 
         if scheme != '' and parsed_obj.scheme + ":" != scheme:
             if not failure:
-                incorrect_url[input_url].append(parsed_obj.scheme + " compared to " + scheme)
+                incorrect_url[input_url].append("incorrect scheme")
+
+        # check the join result
+        join_url = urljoin(base_url, input_url)
+
+        if result_url != '' and result_url != join_url:
+            if not failure:
+                incorrect_url[input_url].append("incorrect join url")
+
+
 
     except ValueError:
         if not failure:
