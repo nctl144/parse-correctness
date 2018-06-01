@@ -31,9 +31,11 @@ fn main() {
     let file_inputurl = "input-url.txt";
     let file_scheme = "scheme-url.txt";
     let file_netloc = "netloc-url.txt";
+    let file_path = "path-url.txt";
 
     let mut scheme_list = Vec::new();
     let mut netloc_list = Vec::new();
+    let mut path_list = Vec::new();
     let mut index = 0;
 
     for scheme in lines_from_file(file_scheme) {
@@ -44,6 +46,10 @@ fn main() {
         netloc_list.push(netloc);
     }
 
+    for path in lines_from_file(file_path) {
+        path_list.push(path);
+    }
+
     for link in lines_from_file(file_inputurl) {
 
         let _issue_list_url = Url::parse(&link)
@@ -51,6 +57,7 @@ fn main() {
 
         let url_scheme = _issue_list_url.scheme();
         let url_netloc = _issue_list_url.host_str();
+        let url_path = _issue_list_url.path();
         let mut url_netloc_str = "";
 
         if url_netloc.is_some() {
@@ -63,6 +70,14 @@ fn main() {
 
         if url_netloc_str != netloc_list[index] {
             println!("unmatched netloc, input is {}", link);
+        }
+
+        if url_path != path_list[index] {
+            if (url_path == "/" && path_list[index] == "") || (url_path == "" && path_list[index] == "/") {
+
+            } else {
+                println!("unmatched path, input is {}", link);
+            }
         }
 
         index += 1;
