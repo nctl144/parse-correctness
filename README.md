@@ -4,5 +4,5 @@
 
 Test implemented:
 + Rust scheme, netloc
-+ urllib join, scheme, netloc
++ urllib scheme, netloc
 + uriparser scheme, netloc
