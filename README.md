@@ -4,6 +4,6 @@
 
 Test implemented:
 + Rust scheme, netloc, path
-+ urllib scheme, netloc
++ urllib scheme, netloc, path
 + uriparser scheme, netloc
 + gurl-cython scheme, netloc
