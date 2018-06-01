@@ -29,6 +29,16 @@ def main():
     remove_files(c_workpath, "scheme-url.txt")
     remove_files(c_workpath, "netloc-url.txt")
 
+    python_workpath = os.path.join(os.getcwd(), "python")
+    remove_files(python_workpath, "input-url.txt")
+    remove_files(python_workpath, "scheme-url.txt")
+    remove_files(python_workpath, "netloc-url.txt")
+
+    gurlcython_workpath = os.path.join(os.getcwd(), "gurl-cython")
+    remove_files(gurlcython_workpath, "input-url.txt")
+    remove_files(gurlcython_workpath, "scheme-url.txt")
+    remove_files(gurlcython_workpath, "netloc-url.txt")
+
     rust_workpath = os.path.join(os.getcwd(), "urlparsetest")
     remove_files(rust_workpath, "input-url.txt")
     remove_files(rust_workpath, "scheme-url.txt")
@@ -65,6 +75,14 @@ def main():
     '''
     Write the result to text files
     '''
+    write_result("python/input-url.txt", result_url_list)
+    write_result("python/scheme-url.txt", scheme_list)
+    write_result("python/netloc-url.txt", netloc_list)
+
+    write_result("gurl-cython/input-url.txt", result_url_list)
+    write_result("gurl-cython/scheme-url.txt", scheme_list)
+    write_result("gurl-cython/netloc-url.txt", netloc_list)
+
     write_result("c/input-url.txt", result_url_list)
     write_result("c/scheme-url.txt", scheme_list)
     write_result("c/netloc-url.txt", netloc_list)
