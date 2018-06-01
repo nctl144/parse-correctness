@@ -19,25 +19,43 @@ def main():
     read_data("netloc-url.txt", netloc_list)
     read_data("path-url.txt", path_list)
 
-    counter = 0
+    counter_scheme = 0
+    counter_netloc = 0
+    counter_path = 0
 
     for url in input_list:
         parsed_result = URL(url.encode())
         path_result = parsed_result.path().decode()
 
-        if scheme_list[counter] != parsed_result.scheme().decode():
+        if scheme_list[counter_scheme] != parsed_result.scheme().decode():
             print("unmatched scheme at", url)
 
-        if netloc_list[counter] != parsed_result.host().decode():
+        counter_scheme += 1
+
+    print('\n')
+    
+    for url in input_list:
+        parsed_result = URL(url.encode())
+        path_result = parsed_result.path().decode()
+
+        if netloc_list[counter_netloc] != parsed_result.host().decode():
             print("unmatched netloc at", url)
 
-        if path_result != path_list[counter]:
-            if ((path_result == "" and path_list[counter] == '/') or (path_result == "/" and path_list[counter] == "")):
+        counter_netloc += 1
+
+    print('\n')
+
+    for url in input_list:
+        parsed_result = URL(url.encode())
+        path_result = parsed_result.path().decode()
+
+        if path_result != path_list[counter_path]:
+            if ((path_result == "" and path_list[counter_path] == '/') or (path_result == "/" and path_list[counter_path] == "")):
                 pass
             else:
                 print("unmatched path at", url)
 
-        counter += 1
+        counter_path += 1
 
 
 if __name__ == "__main__":
