@@ -76,7 +76,7 @@ int main() {
 
     // int j;
     // for (j = 0; j < 409; j++) {
-    //     printf("url: %s", scheme_list[j]);
+    //     printf("url: %s", netloc_list[j]);
     // }
 
 
@@ -106,13 +106,34 @@ int main() {
             printf("unmatched scheme: %s, at index: %d\n", input_url_buffer, counter);
         }
 
-        if (strncmp(netloc_list[counter], uri.hostText.first, strlen(netloc_list[counter])) != 0) {
-            printf("unmatched netloc: %s, at index: %d\n", input_url_buffer, counter);
-        }
+        char hostTextAfter[255] = "";
+        char hostTextFirst[255] = "";
 
-        // printf("1 %s, 2%s\n", scheme_list[counter], uri.scheme.first);
-        // printf("host text after Last: %s\n", uri.hostText.afterLast);
-        // printf("host text first: %s\n", uri.hostText.first);
+        // if (strcmp(uri.hostText.first, "X") == 0 || strcmp(uri.hostText.first, NULL)) {
+        //
+        // } else {
+        //     strcpy(hostTextAfter, uri.hostText.first);
+        // }
+        // if (uri.hostText.first == NULL) {
+        //     hostTextFirst = "";
+        // }
+        // printf("%d", strcmp(hostTextFirst, "X"));
+
+        // if (strcmp(uri.hostText.afterLast, "X") == 0 || strcmp(uri.hostText.afterLast, NULL)) {
+        //
+        // } else {
+        //     strcpy(hostTextAfter, uri.hostText.afterLast);
+        // }
+
+        // if (strncmp(netloc_list[counter], uri.hostText.first, strlen(netloc_list[counter])) != 0) {
+        //     printf("unmatched netloc: %s, at index: %d\n", input_url_buffer, counter);
+        // }
+
+        // printf("host text after Last: %s\n", hostTextAfter);
+        printf("host text first: %s\n", uri.hostText.first);
+        // printf("scheme after Last: %s\n", uri.scheme.afterLast);
+        // printf("scheme first: %s\n", uri.scheme.first);
+
         counter += 1;
     }
 
