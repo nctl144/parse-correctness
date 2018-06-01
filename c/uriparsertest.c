@@ -53,6 +53,27 @@ int main() {
 
     fclose(scheme_url);
 
+
+    FILE* netloc_url;
+
+    char netloc_url_buffer[255];
+    char netloc_list[409][255];
+
+    netloc_url = fopen("netloc-url.txt", "r");
+    int index_netloc = 0;
+    while (fgets(netloc_url_buffer, 255, (FILE*) netloc_url)) {
+        strcpy(netloc_list[index_netloc], netloc_url_buffer);
+        int i = 0;
+        for (i = 0; i < strlen(netloc_list[index_netloc]); i++) {
+            if (netloc_list[index_netloc][i] == '\n') {
+                netloc_list[index_netloc][i] = '\0';
+            }
+        }
+        index_netloc += 1;
+    }
+
+    fclose(netloc_url);
+
     // int j;
     // for (j = 0; j < 409; j++) {
     //     printf("url: %s", scheme_list[j]);
@@ -85,7 +106,13 @@ int main() {
             printf("unmatched scheme: %s, at index: %d\n", input_url_buffer, counter);
         }
 
+        if (strncmp(netloc_list[counter], uri.hostText.first, strlen(netloc_list[counter])) != 0) {
+            printf("unmatched netloc: %s, at index: %d\n", input_url_buffer, counter);
+        }
+
         // printf("1 %s, 2%s\n", scheme_list[counter], uri.scheme.first);
+        // printf("host text after Last: %s\n", uri.hostText.afterLast);
+        // printf("host text first: %s\n", uri.hostText.first);
         counter += 1;
     }
 
