@@ -3,63 +3,33 @@ from pygurl import URL
 import json
 import collections
 
+def read_data(filename, arr):
+    with open(filename, 'r') as f:
+        for item in f:
+            if item[-1:] == '\n':
+                item = item.replace('\n', '')
+            arr.append(item)
 
 def main():
 
-    with open("../urltest.json", 'r') as f:
-        datastore = json.load(f)
+    input_list, scheme_list, netloc_list = [], [], []
 
-    incorrect_url = collections.defaultdict(list)
+    read_data("input-url.txt", input_list)
+    read_data("scheme-url.txt", scheme_list)
+    read_data("netloc-url.txt", netloc_list)
 
-    for item in datastore:
-        input_url = item['input']
-        base_url = item['base']
+    counter = 0
 
-        if base_url == 'about:blank':
-            base_url = ''
+    for url in input_list:
+        parsed_result = URL(url.encode())
 
-        scheme, netloc, path, search, failure, result_url = '', '', '', '', False, ''
+        if scheme_list[counter] != parsed_result.scheme().decode():
+            print("unmatched scheme at", url)
 
-        if 'href' in item:
-            result_url = item['href']
-            result_url = result_url[:-1] if result_url[-1] == '/' else result_url
+        if netloc_list[counter] != parsed_result.host().decode():
+            print("unmatched netloc at", url)
 
-        if 'protocol' in item:
-            scheme = item['protocol']
-            scheme = scheme[:-1] if scheme[-1] == ':' else scheme
-
-        if 'hostname' in item:
-            netloc = item['hostname']
-
-        if 'pathname' in item:
-            path = item['pathname']
-
-        if 'search' in item:
-            query = item['search']
-
-        if 'failure' in item:
-            failure = True
-
-        try:
-            parsed_obj = urlparse(result_url)
-
-            if scheme.lower() != '' and parsed_obj.scheme.lower() != scheme.lower():
-                if not failure:
-                    incorrect_url[input_url].append("incorrect scheme")
-
-            if netloc.lower() != '' and parsed_obj.netloc.lower() != netloc.lower():
-                if not failure:
-                    incorrect_url[input_url].append("incorrect netloc")
-
-
-        except ValueError:
-            if not failure:
-                print("the value error url is:", input_url)
-
-
-
-    for key, val in incorrect_url.items():
-        print(key, '----', val)
+        counter += 1
 
 
 if __name__ == "__main__":
