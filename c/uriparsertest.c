@@ -7,28 +7,6 @@
 
 int main() {
 
-    // printf("absolutePath: %d\n", uri.absolutePath);
-    // printf("scheme after Last: %s\n", uri.scheme.afterLast);
-    // printf("scheme first: %s\n", uri.scheme.first);
-    // printf("fragment after last: %s\n", uri.fragment.afterLast);
-    // printf("fragment first: %s\n", uri.fragment.first);
-    // printf("hostData ip 4: %s\n", uri.hostData.ip4->data);
-    // printf("hostData ip6: %s\n", uri.hostData.ip6->data);
-    // printf("hostData ipFuture afterLast: %s\n", uri.hostData.ipFuture.afterLast);
-    // printf("hostData ipFuture first: %s\n", uri.hostData.ipFuture.first);
-    // printf("host text after Last: %s\n", uri.hostText.afterLast);
-    // printf("host text first: %s\n", uri.hostText.first);
-    // printf("owner: %d\n", uri.owner);
-    //
-    // // ask about this later
-    // // printf("pathHead afterLast %s\n", uri.pathHead->text.afterLast);
-    // // printf("pathHead first %s\n", uri.pathHead->text.first);
-    // // printf("pathTail afterLast %s\n", uri.pathTail->text.afterLast);
-    // // printf("pathTail first %s\n", uri.pathTail->text.first);
-    //
-    // printf("query afterLast: %s\n", uri.query.afterLast);
-    // printf("query First: %s\n", uri.query.first);
-
     /*
     *
     Read the input files
@@ -109,38 +87,7 @@ int main() {
         char hostTextAfter[255] = "";
         char hostTextFirst[255] = "";
 
-        // if (strcmp(uri.hostText.first, "X") == 0 || strcmp(uri.hostText.first, NULL)) {
-        //
-        // } else {
-        //     strcpy(hostTextAfter, uri.hostText.first);
-        // }
-        // if (uri.hostText.first == NULL) {
-        //     hostTextFirst = "";
-        // }
-        // printf("%d", strcmp(hostTextFirst, "X"));
-
-        // if (strcmp(uri.hostText.afterLast, "X") == 0 || strcmp(uri.hostText.afterLast, NULL)) {
-        //
-        // } else {
-        //     strcpy(hostTextAfter, uri.hostText.afterLast);
-        // }
-
-        // if (strncmp(netloc_list[counter], uri.hostText.first, strlen(netloc_list[counter])) != 0) {
-        //     printf("unmatched netloc: %s, at index: %d\n", input_url_buffer, counter);
-        // }
-
-        // printf("%s seperated by %s\n", uri.hostText.afterLast, uri.hostText.first);
         printf("%s\n", uri.hostText.first);
-
-        // char tempResult[255];
-        // if (strcmp(uri.hostText.first, "") != 0 && strcmp(uri.hostText.first, "X") != 0 && strcmp(uri.hostText.first, NULL) != 0) {
-        //     strncpy(tempResult, uri.hostText.first, strlen(uri.hostText.first) - strlen(uri.hostText.afterLast));
-        // } else {
-        //     strcpy(tempResult, "");
-        // }
-
-        // printf("scheme after Last: %s\n", uri.scheme.afterLast);
-        // printf("scheme first: %s\n", uri.scheme.first);
 
         counter += 1;
     }
