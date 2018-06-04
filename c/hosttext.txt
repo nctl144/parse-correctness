@@ -1,409 +1,409 @@
-example.org/
-foo:21/bar;par?b#c
-test/
-test/
-test/x
-test/x
-example.org/foo/foo.com
-example.org/foo/:foo.com
-example.org/foo/foo.com
-(null)
-f:21/%20b%20?%20d%20#%20e
-(null)
-f/c
-f:0/c
-f:0/c
-f/c
-f/c
-example.org/foo/bar
-example.org/foo/bar
-example.org/foo/:foo.com/
-example.org/foo/:foo.com/
-example.org/foo/:
-example.org/foo/:a
-example.org/foo/:/
-example.org/foo/:/
-example.org/foo/:#
-example.org/foo/bar#
-example.org/foo/bar#/
-example.org/foo/bar#\
-example.org/foo/bar#;?
-example.org/foo/bar?
-example.org/
-example.org/foo/:23
-example.org/:23
-example.org/foo/::
-example.org/foo/::23
-X
-c:29/d
-example.org/foo/:@c:29
-d:2/
-d:2/
-d/
-foo.com//@
-foo.com/
-a/b:c/d@foo.com/
-(null)
-(null)
-X
-X
-X
-(null)
-foo/bar
-foo/path;a??e#f#g
-foo/abcd?efgh?ijkl
-foo/abcd#foo?bar
-example.org/foo/[61:24:74]:98
-example.org/foo/[61:27]/:foo
-2001::1]/
-::7f00:1]/
-::d01:4403]/
-2001::1]/
-example.org/example.com/
-example.com/
-example.com/
-(null)
-X
-(null)
-example.com/
-example.com/
-example.com/
-(null)
-(null)
-(null)
-example.org/foo/example.com/
-example.com/
-example.com/
-(null)
-(null)
-example.com/
-example.com/
-example.com/
-(null)
-(null)
-(null)
-example.org/a/b/c
-example.org/a/%20/c
-example.org/a%2fc
-example.org/a/%2f/c
-example.org/foo/bar#%CE%B2
-(null)
-(null)
-X
-X
-X
-X
-X
-server/file
-server/file
-server/file
-X
-X
-X
-X
-X
-test/
-X
-X
-X
-X
-X
-example.com/foo
-example.com/.foo
-example.com/foo/
-example.com/foo/
-example.com/foo/
-example.com/foo/
-example.com/foo/..bar
-example.com/foo/ton
-example.com/a
-example.com/
-example.com/ton
-example.com/foo/
-example.com/foo/%2e%2
-example.com/%2e.bar
-example.com//
-example.com/foo/
-example.com/foo/bar/
-example.com/foo
-example.com/%20foo
-example.com/foo%
-example.com/foo%2
-example.com/foo%2zbar
-example.com/foo%2%C3%82%C2%A9zbar
-example.com/foo%41%7a
-example.com/foo%C2%91%91
-example.com/foo%00%51
-example.com/(%28:%3A%29)
-example.com/%3A%3a%3C%3c
-example.com/foobar
-example.com//foo//bar
-example.com/%7Ffp3%3Eju%3Dduvgw%3Dd
-example.com/@asdf%40
-example.com/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD
-example.com/%E2%80%A5/foo
-example.com/%EF%BB%BF/foo
-example.com/%E2%80%AE/foo/%E2%80%AD/bar
-www.google.com/foo?bar=baz#
-www.google.com/foo?bar=baz#%20%C2%BB
-(null)
-www.google.com/
-192.168.0.1/
-www/foo%2Ehtml
-www/foo/html
-foodomain.com/
-www.google.com/foo
-foo/
-foo:81/
-foo:80/
-foo/
-foo:80/
-foo/
-foo:80/
-foo/
-foo:443/
-foo/
-foo:81/
-foo:443/
-foo:815/
-foo:80/
-foo:81/
-foo/
-foo:815/
-example.com/
-example.com/
-example.com/
-(null)
-X
-(null)
-example.com/
-example.com/
-example.com/
-(null)
-(null)
-(null)
-example.com/
-example.com/
-example.com/
-(null)
-(null)
-example.com/
-example.com/
-example.com/
-(null)
-(null)
-(null)
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-pple.com/
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-www.example.com/
-pple.com/
-www.example.com/
-www.example.com/
-www.example.com/test.txt
-www.example.com/
-www.example.com/
-www.example.com/test.txt
-www.example.com/test.txt
-www.example.com/test.txt
-www.example.com/aaa/test.txt
-www.example.com/test.txt
-www.example.com/%E4%B8%AD/test.txt
-www.example2.com/
-www.example2.com/
-X
-X
-X
-example.com/
-googoo.com/
-example.com/
-www.foo.bar.com/
-x/%EF%BF%BD?%EF%BF%BD#%EF%BF%BD
-go.com/
-xn--6qqa088eba/
-xn--fa-hia.example/
-fa%C3%9F.ExAmPlE/
-192.168.0.1/
-192.168.0.1/
-192.168.0.1/
-./
-../
-0..0x300/
-example.com/bar
-(null)
-(null)
-(null)
-(null)
-(null)
-example:800/
-example/
-h/%60%7B%7D?`{}
-example.org/some/path
-example.org:21/smth
-example.org:21/some/path
-(null)
-ho/i
-X
-(null)
-ho/i
-X
-(null)
-ho/i
-X
-(null)
-ho/pa?i
-X
-(null)
-(null)
-(null)
-ho/pa#i
-X
-(null)
-(null)
-(null)
-(null)
-%C3%B1.test/
-%1F!"$&'()*+,-.;<=>^_`{|}~/
-(null)
-%C3%B1/x
-(null)
-(null)
-(null)
-(null)
-xn--n3h/
-xn--n3h/
-127.0.0.1:10100/relative_import.html
-facebook.com/?foo=%7B%22abc%22
-localhost:3000/jqueryui@1.2.3
-host:9000/path?query#frag
-example.org/foo/bar?a=b&c=d
-example.org/foo/bar??a=b&c=d
-example.org/foo/bar
-(null)
-foo.bar/baz?qux#foo%08bar
-foo.bar/baz?qux#foo%22bar
-foo.bar/baz?qux#foo%3Cbar
-foo.bar/baz?qux#foo%3Ebar
-foo.bar/baz?qux#foo%60bar
-192.168.1.1/
-192.168.257.com/
-0.0.1.0/
-256.com/
-59.154.201.255/
-999999999.com/
-10000000000.com/
-255.255.255.255/
-255.255.255.255/
-256.256.256.256.256/
-0.0.0.0/
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-spider/
-X
-X
-X
-X
-X
-X
-X
-X
-lion/localhost//pig
-X
-tea/rooibos
-tea/?chai
-X
-X
-X
-X
-X
-X
-host/dir/C
-host/dir/C|a
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-X
-1::]/
-%C3%B1
-%C3%B1?x
-%C3%B1#x
-%C3%B1#x
-%C3%B1?x
-X
-X
-X
-X
-X
-foobar.com/someconfig;mode=netascii
-foobar.com:23/
-10.10.10.10:7777/Index.ut2
-somehost:6379/0?baz=bam&qux=baz
-host:911/sup
-github.com/foo/bar.git
-myserver.com:6999/channel?passwd
-fw.example.org:9999/foo.bar.org?type=TXT
-localhost:389/ou=People,o=JNDITutorial
-github.com/foo/bar
-(null)
-(null)
-%E2%80%A0/
-H%4fSt/path
-1:2:0:0:5::]/
-1:2::3]/
-1:2::3]:80/
-(null)
-(null)
-0177.0.0.0189/
-0x7f.0.0.0x7g/
-0x7f.0.0.0x7g/
-0:1:0:1:0:1:0:1]/
-1:0:1:0:1:0:1:0]/
-example.org/test?%22
-example.org/test?#
-example.org/test?%3C
-example.org/test?%3E
-example.org/test?%E2%8C%A3
-example.org/test?%23%23
-example.org/test?%GH
-example.org/test?a#%EF
-example.org/test?a#%GH
-(null)
-X
-(null)
-b/test-a-colon-slash-slash-b.html
-example.org/test?a#bc
+/ seperated by example.org/
+:21/bar;par?b#c seperated by foo:21/bar;par?b#c
+/ seperated by test/
+/ seperated by test/
+/x seperated by test/x
+/x seperated by test/x
+/foo/foo.com seperated by example.org/foo/foo.com
+/foo/:foo.com seperated by example.org/foo/:foo.com
+/foo/foo.com seperated by example.org/foo/foo.com
+(null) seperated by (null)
+:21/%20b%20?%20d%20#%20e seperated by f:21/%20b%20?%20d%20#%20e
+(null) seperated by (null)
+/c seperated by f/c
+:0/c seperated by f:0/c
+:0/c seperated by f:0/c
+/c seperated by f/c
+/c seperated by f/c
+/foo/bar seperated by example.org/foo/bar
+/foo/bar seperated by example.org/foo/bar
+/foo/:foo.com/ seperated by example.org/foo/:foo.com/
+/foo/:foo.com/ seperated by example.org/foo/:foo.com/
+/foo/: seperated by example.org/foo/:
+/foo/:a seperated by example.org/foo/:a
+/foo/:/ seperated by example.org/foo/:/
+/foo/:/ seperated by example.org/foo/:/
+/foo/:# seperated by example.org/foo/:#
+/foo/bar# seperated by example.org/foo/bar#
+/foo/bar#/ seperated by example.org/foo/bar#/
+/foo/bar#\ seperated by example.org/foo/bar#\
+/foo/bar#;? seperated by example.org/foo/bar#;?
+/foo/bar? seperated by example.org/foo/bar?
+/ seperated by example.org/
+/foo/:23 seperated by example.org/foo/:23
+/:23 seperated by example.org/:23
+/foo/:: seperated by example.org/foo/::
+/foo/::23 seperated by example.org/foo/::23
+X seperated by X
+:29/d seperated by c:29/d
+/foo/:@c:29 seperated by example.org/foo/:@c:29
+:2/ seperated by d:2/
+:2/ seperated by d:2/
+/ seperated by d/
+//@ seperated by foo.com//@
+/ seperated by foo.com/
+/b:c/d@foo.com/ seperated by a/b:c/d@foo.com/
+(null) seperated by (null)
+(null) seperated by (null)
+X seperated by X
+X seperated by X
+X seperated by X
+(null) seperated by (null)
+/bar seperated by foo/bar
+/path;a??e#f#g seperated by foo/path;a??e#f#g
+/abcd?efgh?ijkl seperated by foo/abcd?efgh?ijkl
+/abcd#foo?bar seperated by foo/abcd#foo?bar
+/foo/[61:24:74]:98 seperated by example.org/foo/[61:24:74]:98
+/foo/[61:27]/:foo seperated by example.org/foo/[61:27]/:foo
+]/ seperated by 2001::1]/
+]/ seperated by ::7f00:1]/
+]/ seperated by ::d01:4403]/
+]/ seperated by 2001::1]/
+/example.com/ seperated by example.org/example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+X seperated by X
+(null) seperated by (null)
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/foo/example.com/ seperated by example.org/foo/example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/a/b/c seperated by example.org/a/b/c
+/a/%20/c seperated by example.org/a/%20/c
+/a%2fc seperated by example.org/a%2fc
+/a/%2f/c seperated by example.org/a/%2f/c
+/foo/bar#%CE%B2 seperated by example.org/foo/bar#%CE%B2
+(null) seperated by (null)
+(null) seperated by (null)
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/file seperated by server/file
+/file seperated by server/file
+/file seperated by server/file
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/ seperated by test/
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/foo seperated by example.com/foo
+/.foo seperated by example.com/.foo
+/foo/ seperated by example.com/foo/
+/foo/ seperated by example.com/foo/
+/foo/ seperated by example.com/foo/
+/foo/ seperated by example.com/foo/
+/foo/..bar seperated by example.com/foo/..bar
+/foo/ton seperated by example.com/foo/ton
+/a seperated by example.com/a
+/ seperated by example.com/
+/ton seperated by example.com/ton
+/foo/ seperated by example.com/foo/
+/foo/%2e%2 seperated by example.com/foo/%2e%2
+/%2e.bar seperated by example.com/%2e.bar
+// seperated by example.com//
+/foo/ seperated by example.com/foo/
+/foo/bar/ seperated by example.com/foo/bar/
+/foo seperated by example.com/foo
+/%20foo seperated by example.com/%20foo
+/foo% seperated by example.com/foo%
+/foo%2 seperated by example.com/foo%2
+/foo%2zbar seperated by example.com/foo%2zbar
+/foo%2%C3%82%C2%A9zbar seperated by example.com/foo%2%C3%82%C2%A9zbar
+/foo%41%7a seperated by example.com/foo%41%7a
+/foo%C2%91%91 seperated by example.com/foo%C2%91%91
+/foo%00%51 seperated by example.com/foo%00%51
+/(%28:%3A%29) seperated by example.com/(%28:%3A%29)
+/%3A%3a%3C%3c seperated by example.com/%3A%3a%3C%3c
+/foobar seperated by example.com/foobar
+//foo//bar seperated by example.com//foo//bar
+/%7Ffp3%3Eju%3Dduvgw%3Dd seperated by example.com/%7Ffp3%3Eju%3Dduvgw%3Dd
+/@asdf%40 seperated by example.com/@asdf%40
+/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD seperated by example.com/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD
+/%E2%80%A5/foo seperated by example.com/%E2%80%A5/foo
+/%EF%BB%BF/foo seperated by example.com/%EF%BB%BF/foo
+/%E2%80%AE/foo/%E2%80%AD/bar seperated by example.com/%E2%80%AE/foo/%E2%80%AD/bar
+/foo?bar=baz# seperated by www.google.com/foo?bar=baz#
+/foo?bar=baz#%20%C2%BB seperated by www.google.com/foo?bar=baz#%20%C2%BB
+(null) seperated by (null)
+/ seperated by www.google.com/
+/ seperated by 192.168.0.1/
+/foo%2Ehtml seperated by www/foo%2Ehtml
+/foo/html seperated by www/foo/html
+/ seperated by foodomain.com/
+/foo seperated by www.google.com/foo
+/ seperated by foo/
+:81/ seperated by foo:81/
+:80/ seperated by foo:80/
+/ seperated by foo/
+:80/ seperated by foo:80/
+/ seperated by foo/
+:80/ seperated by foo:80/
+/ seperated by foo/
+:443/ seperated by foo:443/
+/ seperated by foo/
+:81/ seperated by foo:81/
+:443/ seperated by foo:443/
+:815/ seperated by foo:815/
+:80/ seperated by foo:80/
+:81/ seperated by foo:81/
+/ seperated by foo/
+:815/ seperated by foo:815/
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+X seperated by X
+(null) seperated by (null)
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by example.com/
+/ seperated by example.com/
+/ seperated by example.com/
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by pple.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/ seperated by pple.com/
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/test.txt seperated by www.example.com/test.txt
+/ seperated by www.example.com/
+/ seperated by www.example.com/
+/test.txt seperated by www.example.com/test.txt
+/test.txt seperated by www.example.com/test.txt
+/test.txt seperated by www.example.com/test.txt
+/aaa/test.txt seperated by www.example.com/aaa/test.txt
+/test.txt seperated by www.example.com/test.txt
+/%E4%B8%AD/test.txt seperated by www.example.com/%E4%B8%AD/test.txt
+/ seperated by www.example2.com/
+/ seperated by www.example2.com/
+X seperated by X
+X seperated by X
+X seperated by X
+/ seperated by example.com/
+/ seperated by googoo.com/
+/ seperated by example.com/
+/ seperated by www.foo.bar.com/
+/%EF%BF%BD?%EF%BF%BD#%EF%BF%BD seperated by x/%EF%BF%BD?%EF%BF%BD#%EF%BF%BD
+/ seperated by go.com/
+/ seperated by xn--6qqa088eba/
+/ seperated by xn--fa-hia.example/
+/ seperated by fa%C3%9F.ExAmPlE/
+/ seperated by 192.168.0.1/
+/ seperated by 192.168.0.1/
+/ seperated by 192.168.0.1/
+/ seperated by ./
+/ seperated by ../
+/ seperated by 0..0x300/
+/bar seperated by example.com/bar
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+:800/ seperated by example:800/
+/ seperated by example/
+/%60%7B%7D?`{} seperated by h/%60%7B%7D?`{}
+/some/path seperated by example.org/some/path
+:21/smth seperated by example.org:21/smth
+:21/some/path seperated by example.org:21/some/path
+(null) seperated by (null)
+/i seperated by ho/i
+X seperated by X
+(null) seperated by (null)
+/i seperated by ho/i
+X seperated by X
+(null) seperated by (null)
+/i seperated by ho/i
+X seperated by X
+(null) seperated by (null)
+/pa?i seperated by ho/pa?i
+X seperated by X
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/pa#i seperated by ho/pa#i
+X seperated by X
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by %C3%B1.test/
+"$&'()*+,-.;<=>^_`{|}~/ seperated by %1F!"$&'()*+,-.;<=>^_`{|}~/
+(null) seperated by (null)
+/x seperated by %C3%B1/x
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by xn--n3h/
+/ seperated by xn--n3h/
+:10100/relative_import.html seperated by 127.0.0.1:10100/relative_import.html
+/?foo=%7B%22abc%22 seperated by facebook.com/?foo=%7B%22abc%22
+:3000/jqueryui@1.2.3 seperated by localhost:3000/jqueryui@1.2.3
+:9000/path?query#frag seperated by host:9000/path?query#frag
+/foo/bar?a=b&c=d seperated by example.org/foo/bar?a=b&c=d
+/foo/bar??a=b&c=d seperated by example.org/foo/bar??a=b&c=d
+/foo/bar seperated by example.org/foo/bar
+(null) seperated by (null)
+/baz?qux#foo%08bar seperated by foo.bar/baz?qux#foo%08bar
+/baz?qux#foo%22bar seperated by foo.bar/baz?qux#foo%22bar
+/baz?qux#foo%3Cbar seperated by foo.bar/baz?qux#foo%3Cbar
+/baz?qux#foo%3Ebar seperated by foo.bar/baz?qux#foo%3Ebar
+/baz?qux#foo%60bar seperated by foo.bar/baz?qux#foo%60bar
+/ seperated by 192.168.1.1/
+/ seperated by 192.168.257.com/
+/ seperated by 0.0.1.0/
+/ seperated by 256.com/
+/ seperated by 59.154.201.255/
+/ seperated by 999999999.com/
+/ seperated by 10000000000.com/
+/ seperated by 255.255.255.255/
+/ seperated by 255.255.255.255/
+/ seperated by 256.256.256.256.256/
+/ seperated by 0.0.0.0/
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/ seperated by spider/
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/localhost//pig seperated by lion/localhost//pig
+X seperated by X
+/rooibos seperated by tea/rooibos
+/?chai seperated by tea/?chai
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/dir/C seperated by host/dir/C
+/dir/C|a seperated by host/dir/C|a
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+]/ seperated by 1::]
+/ seperated by %C3%B1
+?x seperated by %C3%B1?x
+#x seperated by %C3%B1#x
+#x seperated by %C3%B1#x
+?x seperated by %C3%B1?x
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+X seperated by X
+/someconfig;mode=netascii seperated by foobar.com/someconfig;mode=netascii
+:23/ seperated by foobar.com:23/
+:7777/Index.ut2 seperated by 10.10.10.10:7777/Index.ut2
+:6379/0?baz=bam&qux=baz seperated by somehost:6379/0?baz=bam&qux=baz
+:911/sup seperated by host:911/sup
+/foo/bar.git seperated by github.com/foo/bar.git
+:6999/channel?passwd seperated by myserver.com:6999/channel?passwd
+:9999/foo.bar.org?type=TXT seperated by fw.example.org:9999/foo.bar.org?type=TXT
+:389/ou=People,o=JNDITutorial seperated by localhost:389/ou=People,o=JNDITutorial
+/foo/bar seperated by github.com/foo/bar
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by %E2%80%A0/
+/path seperated by H%4fSt/path
+]/ seperated by 1:2:0:0:5::]/
+]/ seperated by 1:2::3]/
+]:80/ seperated by 1:2::3]:80/
+(null) seperated by (null)
+(null) seperated by (null)
+/ seperated by 0177.0.0.0189/
+/ seperated by 0x7f.0.0.0x7g/
+/ seperated by 0x7f.0.0.0x7g/
+]/ seperated by 0:1:0:1:0:1:0:1]/
+]/ seperated by 1:0:1:0:1:0:1:0]/
+/test?%22 seperated by example.org/test?%22
+/test?# seperated by example.org/test?#
+/test?%3C seperated by example.org/test?%3C
+/test?%3E seperated by example.org/test?%3E
+/test?%E2%8C%A3 seperated by example.org/test?%E2%8C%A3
+/test?%23%23 seperated by example.org/test?%23%23
+/test?%GH seperated by example.org/test?%GH
+/test?a#%EF seperated by example.org/test?a#%EF
+/test?a#%GH seperated by example.org/test?a#%GH
+(null) seperated by (null)
+X seperated by X
+(null) seperated by (null)
+/test-a-colon-slash-slash-b.html seperated by b/test-a-colon-slash-slash-b.html
+/test?a#bc seperated by example.org/test?a#bc

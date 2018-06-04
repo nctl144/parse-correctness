@@ -129,8 +129,16 @@ int main() {
         //     printf("unmatched netloc: %s, at index: %d\n", input_url_buffer, counter);
         // }
 
-        // printf("host text after Last: %s\n", hostTextAfter);
-        printf("host text first: %s\n", uri.hostText.first);
+        // printf("%s seperated by %s\n", uri.hostText.afterLast, uri.hostText.first);
+        printf("%s\n", uri.hostText.first);
+
+        // char tempResult[255];
+        // if (strcmp(uri.hostText.first, "") != 0 && strcmp(uri.hostText.first, "X") != 0 && strcmp(uri.hostText.first, NULL) != 0) {
+        //     strncpy(tempResult, uri.hostText.first, strlen(uri.hostText.first) - strlen(uri.hostText.afterLast));
+        // } else {
+        //     strcpy(tempResult, "");
+        // }
+
         // printf("scheme after Last: %s\n", uri.scheme.afterLast);
         // printf("scheme first: %s\n", uri.scheme.first);
 

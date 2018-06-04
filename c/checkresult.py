@@ -1,7 +1,7 @@
 # result from uriparser
 arr = []
 
-with open('hosttext.txt', 'r') as f:
+with open('netloc-result.txt', 'r') as f:
     for item in f:
         if item[-1:] == '\n':
             item = item.replace('\n', '')
