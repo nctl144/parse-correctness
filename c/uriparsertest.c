@@ -56,6 +56,26 @@ int main() {
 
     fclose(netloc_url);
 
+    FILE* path;
+
+    char path_buffer[255];
+    char path_list[409][255];
+
+    path = fopen("path-url.txt", "r");
+    int index_path = 0;
+    while (fgets(path_buffer, 255, (FILE*) path)) {
+        strcpy(path_list[index_path], path_buffer);
+        int i = 0;
+        for (i = 0; i < strlen(path_list[index_path]); i++) {
+            if (path_list[index_path][i] == '\n') {
+                path_list[index_path][i] = '\0';
+            }
+        }
+        index_path += 1;
+    }
+
+    fclose(path);
+
     // int j;
     // for (j = 0; j < 409; j++) {
     //     printf("url: %s", netloc_list[j]);
@@ -99,14 +119,31 @@ int main() {
             }
 		}
 
-        if (uri.hostText.first) {
-            char host[255];
-			sprintf(host, "%.*s", RANGE(uri.hostText));
+        // // netloc test
+        // if (uri.hostText.first) {
+        //     char host[255];
+		// 	sprintf(host, "%.*s", RANGE(uri.hostText));
+        //
+        //     if (strcmp(netloc_list[counter], host) != 0) {
+        //         printf("unmatched netloc: %s, the result is: %s, while it should be: %s\n", input_url_buffer, host, netloc_list[counter]);
+        //     }
+		// }
 
-            if (strcmp(netloc_list[counter], host) != 0) {
-                printf("unmatched netloc: %s, the result is: %s, while it should be: %s\n", input_url_buffer, host, netloc_list[counter]);
-            }
-		}
+        if (uri.pathHead) {
+            const UriPathSegmentA * p = uri.pathHead;
+
+			for (; p; p = p->next) {
+                char pathseg[255];
+                sprintf(pathseg, "%.*s", RANGE(p->text));
+                if (p->next == NULL) {
+                    printf("%s\n", pathseg);
+                } else {
+                    printf("%s/", pathseg);
+                }
+			}
+		} else {
+            printf("\n");
+        }
 
         counter += 1;
 

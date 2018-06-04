@@ -5,7 +5,7 @@
 Test implemented:
 + Rust scheme, netloc, path
 + urllib scheme, netloc, path
-+ uriparser scheme, netloc
++ uriparser scheme, netloc, path
 + gurl-cython scheme, netloc, path
 
 
