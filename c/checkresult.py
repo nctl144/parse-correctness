@@ -1,3 +1,4 @@
+# result from uriparser
 arr = []
 
 with open('hosttext.txt', 'r') as f:
@@ -10,16 +11,33 @@ with open('hosttext.txt', 'r') as f:
 
         arr.append(item)
 
+# for i in arr:
+#     print("this is the item", i, "asdqwe")
+
 counter = 0
+
+# expected result
+netloc_url = []
 
 with open('netloc-url.txt', 'r') as f:
     for netloc in f:
-        if arr[counter] == "" and (netloc.strip() != "" or netloc.strip() != "\n"):
-            print("unmatched netloc at", netloc)
+        if netloc.strip() == "\n":
+            netloc_url.append("")
+        else:
+            netloc_url.append(netloc.strip())
 
-        if arr[counter] != "" and (netloc.strip() == "" or netloc.strip() == "\n"):
-            print("unmatched netloc at", netloc)
+input_url = []
+with open('input-url.txt') as f:
+    for url in f:
+        if url[-1:] == '\n':
+            url = url.replace('\n', '')
 
-        counter += 1
+        input_url.append(url)
 
-print(counter)
+print("this is the length of each array", len(arr), len(netloc_url), len(input_url))
+
+for netloc in netloc_url:
+    if netloc != arr[counter]:
+        print("unmatched netloc at", input_url[counter], "the result should be", netloc, "while it is", arr[counter])
+
+    counter += 1
