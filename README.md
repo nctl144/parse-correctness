@@ -7,3 +7,8 @@ Test implemented:
 + urllib scheme, netloc, path
 + uriparser scheme, netloc
 + gurl-cython scheme, netloc, path
+
+
+relative path tests:
++ uriparser: relative-test.c
++ rust: urlparsetest rust project :)
