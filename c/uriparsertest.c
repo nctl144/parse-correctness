@@ -2,8 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <uriparser/Uri.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
 
 #include <time.h>
+
+#define RANGE(x)  (int)((x).afterLast-(x).first), ((x).first)
 
 int main() {
 
@@ -68,6 +72,13 @@ int main() {
     int counter = 0;
     input_url = fopen("input-url.txt", "r");
     while (fgets(input_url_buffer, 255, (FILE*) input_url)) {
+        int i = 0;
+
+        for (i = 0; i < strlen(input_url_buffer); i++) {
+            if (input_url_buffer[i] == '\n') {
+                input_url_buffer[i] = '\0';
+            }
+        }
 
         UriParserStateA state;
         UriUriA uri;
@@ -78,18 +89,28 @@ int main() {
             uriFreeUriMembersA(&uri);
         }
 
-        uriFreeUriMembersA(&uri);
+        // scheme test
+        if (uri.scheme.first) {
+            char scheme[255];
+            sprintf(scheme, "%.*s", RANGE(uri.scheme));
 
-        if (strncmp(scheme_list[counter], uri.scheme.first, strlen(scheme_list[counter])) != 0) {
-            printf("unmatched scheme: %s, at index: %d\n", input_url_buffer, counter);
-        }
+            if (strcmp(scheme_list[counter], scheme) != 0) {
+                printf("unmatched scheme: %s, at index: %d\n", input_url_buffer, counter);
+            }
+		}
 
-        char hostTextAfter[255] = "";
-        char hostTextFirst[255] = "";
+        if (uri.hostText.first) {
+            char host[255];
+			sprintf(host, "%.*s", RANGE(uri.hostText));
 
-        printf("%s\n", uri.hostText.first);
+            if (strcmp(netloc_list[counter], host) != 0) {
+                printf("unmatched netloc: %s, the result is: %s, while it should be: %s\n", input_url_buffer, host, netloc_list[counter]);
+            }
+		}
 
         counter += 1;
+
+        uriFreeUriMembersA(&uri);
     }
 
     fclose(input_url);
