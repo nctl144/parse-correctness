@@ -32,10 +32,12 @@ fn main() {
     let file_scheme = "scheme-url.txt";
     let file_netloc = "netloc-url.txt";
     let file_path = "path-url.txt";
+    let file_relative = "relative-test.txt";
 
     let mut scheme_list = Vec::new();
     let mut netloc_list = Vec::new();
     let mut path_list = Vec::new();
+    let mut relative_test = Vec::new();
     let mut index = 0;
 
     for scheme in lines_from_file(file_scheme) {
@@ -48,6 +50,10 @@ fn main() {
 
     for path in lines_from_file(file_path) {
         path_list.push(path);
+    }
+
+    for path in lines_from_file(file_relative) {
+        relative_test.push(path);
     }
 
     for link in lines_from_file(file_inputurl) {
@@ -64,14 +70,17 @@ fn main() {
             url_netloc_str = url_netloc.unwrap()
         }
 
+        // test scheme
         if url_scheme != scheme_list[index] {
             println!("unmatched scheme, input is {}", link);
         }
 
+        // test netloc
         if url_netloc_str != netloc_list[index] {
             println!("unmatched netloc, input is {}", link);
         }
 
+        // test path
         if url_path != path_list[index] {
             if (url_path == "/" && path_list[index] == "") || (url_path == "" && path_list[index] == "/") {
 
@@ -93,5 +102,15 @@ fn main() {
         // println!("fragment {:?}", _issue_list_url.fragment()); // None
         // // println!(!_issue_list_url.cannot_be_a_base());
     }
+
+    // test join
+    for i in (0..5) {
+        let this_document = Url::parse("http://example.com/").expect("failed to parse");
+        let css_url = this_document.join(&relative_test[i]).expect("failed to join");
+        if (css_url.as_str() != "http://example.com/foo") {
+            println!("invalid join, input is {}", relative_test[i]);
+        }
+    }
+
     println!("program is finished :)");
 }
